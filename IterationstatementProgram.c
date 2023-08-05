@@ -40,14 +40,11 @@ int main()
     }
     else
         decision();
-
-
     system("color fc");
     board();
 
     do
     {
-
         player=((player%2)?1:2);
         if(player==1)
         printf("%s Type any digit from 1-9 to fill your response:- ",u1);
@@ -80,12 +77,9 @@ int main()
         player++;
         board();
     }while(score == -1);
-
-
     p=fopen("score.txt","a+");
     if(score==1)
     {
-
         if(player==2)
         {printf("\n\nPlayer1 %s Wins!\n\n",u1);fprintf(p,"\t%s",u1);
         getch();}
@@ -152,7 +146,6 @@ int checkforwin()
 void board()
 {
     int i;
-
     system("cls");
     printf("\tTic-Tac-Toe\n\n");
         printf("\n\n");
